@@ -9,9 +9,10 @@ min-height: 100px;
 }
 html{
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
 }
 body{
-    background-color: var(--black);
+    background-color: var(--black);    
 }
 
 :root{
@@ -39,6 +40,22 @@ body{
 
 /* BUTTON + HOVER */
 
+.footerBox{
+    cursor: pointer;
+}
+.footerBox .green:hover, .speakerView:hover, .fullScreen:hover{
+    color: var(--green-hover);
+}
+.footerBox .fa-microphone:hover, .fa-microphone-lines-slash:hover, .fa-video:hover{
+    color: var(--red);
+}
+.fa-microphone, .fa-video, .green{
+    transition-duration: 0.5s;
+}
+.colorBtn:hover{
+    color: var(--red);
+}
+
 /* HEADER SECTION */
 .headContainer{
     height: 50px;
@@ -62,6 +79,7 @@ body{
     font-size: 14px;
     color: white;
     text-decoration: none;
+    transition-duration: 0.5s;
 }
 .fa-solid{
     padding-right: 3px;
@@ -75,6 +93,7 @@ body{
     line-height: 25px;
     font-size: 14px;
     color: white;
+    transition-duration: 0.5s;
 }
 
 /* MAIN SECTION */
@@ -100,12 +119,17 @@ body{
     left: 0;
     bottom: 8px;
     padding: 4px;
-    font-size: 1vw;
     background-color: var(--grey);    
+}
+.fa-microphone-lines-slash{
+    color: var(--white);
+    cursor: pointer;
 }
 
 /* FOOTER SECTION */
 footer{
+    width: 100%;
+    margin-top: 15px;
     left: 0;
     bottom: 0;
     height: 75px;
@@ -113,12 +137,15 @@ footer{
     display: flex;
     justify-content: space-between;
 }
-.setting, .panel{
+.setting, .pannel{
     display: flex;
     align-items: center;
 }
 .footerBox ul{
     list-style: none;
+}
+.footerBox li:last-child{
+    padding-top: 8px;
 }
 .footerBox{
     display: inline-block;
@@ -130,15 +157,17 @@ footer{
     background-color: var(--grey);
     display: flex;
     align-items: center;
+    
 }
-.footerBtn a{
-    text-decoration: none;
+.footerBtn a{    
     padding: 20px 20px;
+    text-decoration: none;
 }
-.color-txt-btn{
-    color: var(--red);
+.colorBtn{
+    color: var(--white);
+    transition-duration: 0.5s;    
 }
-.setting .footerBox .fa-solid, .panel .footerBox .fa-solid{
+.setting .footerBox .fa-solid, .pannel .footerBox .fa-solid{
     font-size: 25px;
 }
 #color-txt{
