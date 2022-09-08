@@ -10,6 +10,9 @@ min-height: 100px;
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background-color: var(--black);
+}
 
 :root{
     --black: #000;
@@ -28,6 +31,10 @@ html{
 }
 .max-width{
     max-width: 100%;
+}
+.text{    
+    color: var(--white);
+
 }
 
 /* BUTTON + HOVER */
@@ -72,6 +79,31 @@ html{
 
 /* MAIN SECTION */
 
+.mainContainer{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.user{
+    position: relative;
+    min-width: 120px;    
+    width: calc(100% / 7 - 20px);
+}
+.user img{
+    width: 100%;
+    position: relative;
+    padding-right: 5px;
+}
+.mainContainer .text{
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    padding: 4px;
+    font-size: 1vw;
+    background-color: var(--grey);    
+}
+
 /* FOOTER SECTION */
 footer{
     left: 0;
@@ -94,12 +126,12 @@ footer{
     color: var(--white);
     padding:0 10px;
 }
-.btn-foot{
+.footerBtn{
     background-color: var(--grey);
     display: flex;
     align-items: center;
 }
-.btn-foot a{
+.footerBtn a{
     text-decoration: none;
     padding: 20px 20px;
 }
